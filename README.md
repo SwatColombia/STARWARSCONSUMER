@@ -1,59 +1,105 @@
-# ConsumerApi
+# 🌌 Star Wars Films App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+![Angular](https://img.shields.io/badge/Angular-17+-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 
-## Development server
+> App web que consume la API pública de Star Wars (SWAPI) y muestra todas las películas de la saga con estilo épico.
 
-To start a local development server, run:
+<img width="1278" height="940" alt="starwars" src="https://github.com/user-attachments/assets/cf745b29-3d5a-46e6-b38b-7926d82b2c58" />
 
+
+## 📸 Preview
+
+<!-- Arrastra tu screenshot aquí o pega el link -->
+![Preview de la app](./assets/screenshot.png)
+
+---
+
+## 🚀 Tecnologías usadas
+
+- **Angular 17+** — Framework principal (standalone components)
+- **Tailwind CSS** — Estilos y diseño responsivo
+- **TypeScript** — Tipado fuerte
+- **SWAPI** — API pública de Star Wars `https://swapi.dev/api/films/`
+- **HttpClient** — Consumo de la API REST
+
+---
+
+## ⚙️ Instalación y uso
 ```bash
+# 1. Clona el repositorio
+git clone https://github.com/TU_USUARIO/star-wars-app.git
+
+# 2. Entra a la carpeta
+cd star-wars-app
+
+# 3. Instala las dependencias
+npm install
+
+# 4. Corre el servidor de desarrollo
 ng serve
+
+# 5. Abre en el navegador
+http://localhost:4200
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+## 📁 Estructura del proyecto
+```
+src/
+├── app/
+│   ├── components/
+│   │   └── api-consumer/
+│   │       ├── api-consumer.ts
+│   │       ├── api-consumer.html
+│   │       └── api-consumer.css
+│   ├── services/
+│   │   └── api-consumer.service.ts
+│   ├── models/
+│   │   └── series.ts
+│   ├── app.config.ts
+│   └── app.routes.ts
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
+## 🌐 API utilizada
+
+| Endpoint | Descripción |
+|---|---|
+| `GET /films/` | Lista todas las películas de Star Wars |
+
+Respuesta ejemplo:
+```json
+{
+  "count": 6,
+  "results": [
+    {
+      "title": "A New Hope",
+      "episode_id": 4,
+      "director": "George Lucas",
+      "release_date": "1977-05-25",
+      "opening_crawl": "It is a period of civil war..."
+    }
+  ]
+}
 ```
 
-## Building
+---
 
-To build the project run:
+## 👨‍💻 Autor
 
-```bash
-ng build
-```
+**Tu Nombre**  
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TU_USUARIO)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 📄 Licencia
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Este proyecto es de uso educativo y libre distribución.
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+> *"May the Force be with you."* ⚔️
